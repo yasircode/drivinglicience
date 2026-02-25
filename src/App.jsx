@@ -7,11 +7,16 @@ const LicensePortal = () => {
   const [userData, setUserData] = useState(null);
 
   const handleVerify = () => {
-    if (cnic.length < 5) {
-      alert("Please Enter a valid CNIC");
+    // Sirf is specific CNIC ko allow karne ke liye condition
+    const allowedCNIC = "3460116512153";
+
+    if (cnic !== allowedCNIC) {
+      alert("Record Not Found! Please enter the correct CNIC.");
+      setShowCard(false); 
       return;
     }
 
+    // Agar number match kar gaya, to ye data show hoga
     setUserData({
       name: "Umair UL Hassan",
       father: "Muhammad Akram",
@@ -23,7 +28,6 @@ const LicensePortal = () => {
       issueDate: "12-7-2022",
       expiryDate: "11-7-2027",
       photo: myProfilePhoto,
-      // Added Vehicles Array
       allowedVehicles: ["Motorbike", "Car", "Jeep"] 
     });
     setShowCard(true);
