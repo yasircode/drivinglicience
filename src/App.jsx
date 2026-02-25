@@ -8,7 +8,7 @@ const LicensePortal = () => {
 
   const handleVerify = () => {
     if (cnic.length < 5) {
-      alert("Please enter a valid CNIC");
+      alert("Please Enter a valid CNIC");
       return;
     }
 
@@ -46,7 +46,7 @@ const LicensePortal = () => {
           <div className="hidden md:flex gap-6 text-sm font-medium">
             <a href="#" className="hover:text-yellow-400">HOME</a>
             <a href="#" className="hover:text-yellow-400">DLIMS</a>
-            <a href="#" className="hover:text-yellow-400">CONTACT</a>
+            <a href="#" className="hover:text-yellow-400">Contact</a>
           </div>
         </div>
       </nav>
